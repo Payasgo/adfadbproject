@@ -22,6 +22,12 @@
 		},
 		"LS_Snowflake_properties_typeProperties_database": {
 			"value": "AJAY"
+		},
+		"LS_AzureBlobStorage_sasUri": {
+			"value": ""
+		},
+		"LS_AzureBlobStorage_properties_typeProperties_sasToken_secretName": {
+			"value": "blobsas"
 		}
 	}
 }
