@@ -1,0 +1,22 @@
+{
+	"name": "LS_Snowflake",
+	"properties": {
+		"annotations": [],
+		"type": "SnowflakeV2",
+		"typeProperties": {
+			"authenticationType": "Basic",
+			"accountIdentifier": "cp37223.central-india.azure",
+			"user": "PAYASGO",
+			"database": "AJAY",
+			"warehouse": "COMPUTE_WH",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "Ls_AzureKeyVault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "snowflake"
+			}
+		}
+	}
+}
