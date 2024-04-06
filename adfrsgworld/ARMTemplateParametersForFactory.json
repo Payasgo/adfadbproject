@@ -16,6 +16,12 @@
 		},
 		"ls_AzureDataLakeStorage_properties_typeProperties_url": {
 			"value": "@{linkedService().URL}"
+		},
+		"Ls_AzureKeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://savemykeysencp.vault.azure.net/"
+		},
+		"LS_Snowflake_properties_typeProperties_database": {
+			"value": "AJAY"
 		}
 	}
 }

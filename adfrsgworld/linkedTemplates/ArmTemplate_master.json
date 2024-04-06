@@ -24,6 +24,14 @@
 			"type": "string",
 			"defaultValue": "@{linkedService().URL}"
 		},
+		"Ls_AzureKeyVault_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://savemykeysencp.vault.azure.net/"
+		},
+		"LS_Snowflake_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "AJAY"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -62,6 +70,12 @@
 					},
 					"ls_AzureDataLakeStorage_properties_typeProperties_url": {
 						"value": "[parameters('ls_AzureDataLakeStorage_properties_typeProperties_url')]"
+					},
+					"Ls_AzureKeyVault_properties_typeProperties_baseUrl": {
+						"value": "[parameters('Ls_AzureKeyVault_properties_typeProperties_baseUrl')]"
+					},
+					"LS_Snowflake_properties_typeProperties_database": {
+						"value": "[parameters('LS_Snowflake_properties_typeProperties_database')]"
 					}
 				}
 			},

@@ -23,6 +23,14 @@
 		"ls_AzureDataLakeStorage_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "@{linkedService().URL}"
+		},
+		"Ls_AzureKeyVault_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://savemykeysencp.vault.azure.net/"
+		},
+		"LS_Snowflake_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "AJAY"
 		}
 	},
 	"variables": {
@@ -70,6 +78,19 @@
 				"type": "AzureSqlDatabase",
 				"typeProperties": {
 					"connectionString": "[parameters('Ls_AzureSqlDatabase_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Ls_AzureKeyVault')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureKeyVault",
+				"typeProperties": {
+					"baseUrl": "[parameters('Ls_AzureKeyVault_properties_typeProperties_baseUrl')]"
 				}
 			},
 			"dependsOn": []
@@ -183,6 +204,33 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/Ls_AzureSqlDatabase')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/LS_Snowflake')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SnowflakeV2",
+				"typeProperties": {
+					"authenticationType": "Basic",
+					"accountIdentifier": "cp37223.central-india.azure",
+					"user": "PAYASGO",
+					"database": "[parameters('LS_Snowflake_properties_typeProperties_database')]",
+					"warehouse": "COMPUTE_WH",
+					"password": {
+						"type": "AzureKeyVaultSecret",
+						"store": {
+							"referenceName": "Ls_AzureKeyVault",
+							"type": "LinkedServiceReference"
+						},
+						"secretName": "snowflake"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/Ls_AzureKeyVault')]"
 			]
 		},
 		{
