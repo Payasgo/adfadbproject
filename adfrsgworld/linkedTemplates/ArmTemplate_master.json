@@ -16,6 +16,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_AzureDataLakeStorage'"
 		},
+		"Ls_AzureSqlDatabase_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Ls_AzureSqlDatabase'"
+		},
 		"ls_AzureDataLakeStorage_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "@{linkedService().URL}"
@@ -49,6 +53,9 @@
 					},
 					"ls_AzureDataLakeStorage_accountKey": {
 						"value": "[parameters('ls_AzureDataLakeStorage_accountKey')]"
+					},
+					"Ls_AzureSqlDatabase_connectionString": {
+						"value": "[parameters('Ls_AzureSqlDatabase_connectionString')]"
 					},
 					"ls_SqlServer_connectionString": {
 						"value": "[parameters('ls_SqlServer_connectionString')]"

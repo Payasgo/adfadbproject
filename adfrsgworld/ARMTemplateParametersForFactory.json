@@ -11,6 +11,9 @@
 		"ls_AzureDataLakeStorage_accountKey": {
 			"value": ""
 		},
+		"Ls_AzureSqlDatabase_connectionString": {
+			"value": ""
+		},
 		"ls_AzureDataLakeStorage_properties_typeProperties_url": {
 			"value": "@{linkedService().URL}"
 		}
