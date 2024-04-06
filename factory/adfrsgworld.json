@@ -1,0 +1,9 @@
+{
+	"name": "adfrsgworld",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5503b3d4-6a82-4d41-a3d3-1aa0b25f2e2c",
+		"tenantId": "b08760e2-98a3-433b-8321-0d59cd2785dc"
+	}
+}
