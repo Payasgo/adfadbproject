@@ -3,13 +3,20 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_AzureDataLakeStorage",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"URL": {
+					"value": "https://adlsgen2accsrg.dfs.core.windows.net",
+					"type": "Expression"
+				}
+			}
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "contact",
 				"fileSystem": "output"
 			},
 			"columnDelimiter": ",",
