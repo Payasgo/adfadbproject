@@ -117,6 +117,8 @@
 		"folder": {
 			"name": "salserver_adls_blob"
 		},
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2024-04-06T07:37:12Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }

@@ -115,6 +115,8 @@
 		"folder": {
 			"name": "Sqlserver_azureSql"
 		},
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2024-04-06T08:11:29Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }

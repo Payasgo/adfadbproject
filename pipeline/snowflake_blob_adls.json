@@ -58,6 +58,8 @@
 		"folder": {
 			"name": "snowflake_blob_adls"
 		},
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2024-04-06T11:39:53Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }
