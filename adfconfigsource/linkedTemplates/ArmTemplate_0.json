@@ -515,7 +515,7 @@
 								"type": "DatasetReference",
 								"parameters": {
 									"relativeURL": {
-										"value": "@variables('sourceRelativeURL')",
+										"value": "@pipeline().parameters.sourceRelativeURL",
 										"type": "Expression"
 									}
 								}
@@ -527,7 +527,7 @@
 								"type": "DatasetReference",
 								"parameters": {
 									"fileName": {
-										"value": "@variables('SinkFileName')",
+										"value": "@pipeline().parameters.SinkFileName",
 										"type": "Expression"
 									}
 								}
@@ -538,14 +538,12 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
-				"variables": {
+				"parameters": {
 					"sourceRelativeURL": {
-						"type": "String",
-						"defaultValue": "covid19/nationalcasedeath/csv/data.csv"
+						"type": "string"
 					},
 					"SinkFileName": {
-						"type": "String",
-						"defaultValue": "data.csv"
+						"type": "string"
 					}
 				},
 				"folder": {
