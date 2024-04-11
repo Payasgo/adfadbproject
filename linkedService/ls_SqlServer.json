@@ -22,7 +22,7 @@
 			"connectionString": "Integrated Security=False;Data Source=@{linkedService().ServerName};Initial Catalog=@{linkedService().DatabaseName};User ID=@{linkedService().UserName};Password=@{linkedService().password}"
 		},
 		"connectVia": {
-			"referenceName": "integrationRuntimeSHIR",
+			"referenceName": "SHIR",
 			"type": "IntegrationRuntimeReference"
 		}
 	}
