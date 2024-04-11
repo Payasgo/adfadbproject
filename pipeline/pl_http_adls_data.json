@@ -49,17 +49,39 @@
 				"inputs": [
 					{
 						"referenceName": "Ds_ecdc_DelimitedText_http",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"relativeURL": {
+								"value": "@variables('sourceRelativeURL')",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "DS_ecdc_https_DelimitedText",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"fileName": {
+								"value": "@variables('SinkFileName')",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
 		],
+		"variables": {
+			"sourceRelativeURL": {
+				"type": "String",
+				"defaultValue": "covid19/nationalcasedeath/csv/data.csv"
+			},
+			"SinkFileName": {
+				"type": "String",
+				"defaultValue": "data.csv"
+			}
+		},
 		"folder": {
 			"name": "http_adlsgen2"
 		},
