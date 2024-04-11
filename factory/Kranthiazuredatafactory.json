@@ -1,0 +1,9 @@
+{
+	"name": "Kranthiazuredatafactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "624f7e7e-dd04-4d40-bb18-d37cc697f62a",
+		"tenantId": "9109cb8e-266a-474d-a61e-692765c96243"
+	}
+}
