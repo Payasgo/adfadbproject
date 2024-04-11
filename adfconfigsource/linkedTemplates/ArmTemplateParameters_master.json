@@ -1,0 +1,57 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfconfigsource"
+		},
+		"FileServer1_password": {
+			"value": ""
+		},
+		"LS_ecdc_AzureDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"Ls_AzureSqlDatabase_connectionString": {
+			"value": ""
+		},
+		"ls_AzureDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"ls_SqlServer_connectionString": {
+			"value": "Integrated Security=False;Data Source=@{linkedService().ServerName};Initial Catalog=@{linkedService().DatabaseName};User ID=@{linkedService().UserName};Password=@{linkedService().password}"
+		},
+		"FileServer1_properties_typeProperties_host": {
+			"value": "\\\\MADMAX\\Users\\MadMax\\Downloads\\ftp"
+		},
+		"FileServer1_properties_typeProperties_userId": {
+			"value": "MADMAX\\MadMax"
+		},
+		"LS_AzureBlobStorage_sasUri": {
+			"value": ""
+		},
+		"LS_AzureBlobStorage_properties_typeProperties_sasToken_secretName": {
+			"value": "blobsas"
+		},
+		"LS_HttpServer_properties_typeProperties_url": {
+			"value": "https://opendata.ecdc.europa.eu"
+		},
+		"LS_Snowflake_properties_typeProperties_database": {
+			"value": "AJAY"
+		},
+		"LS_ecdc_AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://adlscopydata.dfs.core.windows.net/"
+		},
+		"Ls_AzureKeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://savemykeysencp.vault.azure.net/"
+		},
+		"ls_AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "@{linkedService().URL}"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
