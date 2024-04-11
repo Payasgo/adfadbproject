@@ -1,0 +1,9 @@
+{
+	"name": "adfconfigsource",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3d540df0-4771-40c6-ae50-9f5b3f7ec5a1",
+		"tenantId": "b08760e2-98a3-433b-8321-0d59cd2785dc"
+	}
+}
