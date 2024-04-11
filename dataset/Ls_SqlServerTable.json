@@ -5,9 +5,9 @@
 			"referenceName": "ls_SqlServer",
 			"type": "LinkedServiceReference",
 			"parameters": {
-				"ServerName": "MADMAX",
+				"ServerName": "KRANTHI",
 				"DatabaseName": "EMPLOYEE",
-				"UserName": "yarli",
+				"UserName": "adf",
 				"password": "060560"
 			}
 		},
