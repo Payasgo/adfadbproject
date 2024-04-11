@@ -1,0 +1,17 @@
+{
+	"name": "Copy_ecdc_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2024-04-10T07:58:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
