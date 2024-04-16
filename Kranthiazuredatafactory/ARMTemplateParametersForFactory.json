@@ -52,6 +52,24 @@
 		},
 		"ls_new_AzureDataLakeStorage_properties_typeProperties_url": {
 			"value": "https://kranthiadls.dfs.core.windows.net/"
+		},
+		"trigger1_properties_pipeline_parameters_FolderPath_Source": {
+			"value": " sourcefolder"
+		},
+		"trigger1_properties_pipeline_parameters_Directory_Source": {
+			"value": "subfolder"
+		},
+		"trigger1_properties_pipeline_parameters_FolderPath_Destination": {
+			"value": "destinationfolder"
+		},
+		"trigger1_properties_pipeline_parameters_Directory_Destination": {
+			"value": "subfolder"
+		},
+		"trigger1_properties_pipeline_parameters_LastModified_From": {
+			"value": "@trigger().outputs.windowStartTime"
+		},
+		"trigger1_properties_pipeline_parameters_LastModified_To": {
+			"value": "@trigger().outputs.windowEndTime"
 		}
 	}
 }
