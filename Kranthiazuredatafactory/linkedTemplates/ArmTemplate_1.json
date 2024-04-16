@@ -742,7 +742,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/pl_Excel_adls_gen2_sqlserver')]",
+			"name": "[concat(parameters('factoryName'), '/pl_Excel_csv_adls_gen2_sqlserver_copy_excel file_sqlserver')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
