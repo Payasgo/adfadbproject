@@ -1,0 +1,33 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipeline": {
+			"pipelineReference": {
+				"referenceName": "pl_copy_lastmodifeddate",
+				"type": "PipelineReference"
+			},
+			"parameters": {
+				"FolderPath_Source": " sourcefolder",
+				"Directory_Source": "subfolder",
+				"FolderPath_Destination": "destinationfolder",
+				"Directory_Destination": "subfolder",
+				"LastModified_From": "@trigger().outputs.windowStartTime",
+				"LastModified_To": "@trigger().outputs.windowEndTime"
+			}
+		},
+		"type": "TumblingWindowTrigger",
+		"typeProperties": {
+			"frequency": "Minute",
+			"interval": 15,
+			"startTime": "2024-04-16T11:42:00Z",
+			"delay": "00:00:00",
+			"maxConcurrency": 50,
+			"retryPolicy": {
+				"intervalInSeconds": 30
+			},
+			"dependsOn": []
+		}
+	}
+}
