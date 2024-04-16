@@ -1,5 +1,5 @@
 {
-	"name": "pl_Excel_adls_gen2_sqlserver",
+	"name": "pl_Excel_csv_adls_gen2_sqlserver_copy_excel file_sqlserver",
 	"properties": {
 		"activities": [
 			{
