@@ -1,0 +1,40 @@
+{
+	"name": "folderpath",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_new_AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"ContainerName": {
+				"type": "string"
+			},
+			"folderpath": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Table 1",
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "input"
+			}
+		},
+		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			}
+		]
+	}
+}
