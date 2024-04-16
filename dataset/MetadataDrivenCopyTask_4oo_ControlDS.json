@@ -1,0 +1,19 @@
+{
+	"name": "MetadataDrivenCopyTask_4oo_ControlDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_DATA_driven",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MetadataDrivenCopyTask_4oo_20240417"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "MainControlTable_4oo"
+		}
+	}
+}
