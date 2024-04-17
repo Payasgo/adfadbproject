@@ -1,0 +1,19 @@
+{
+	"name": "MetadataDrivenCopyTask_6mm_ControlDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_DATA_driven",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MetadataDrivenCopyTask_6mm_20240417"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "selectthefile"
+		}
+	}
+}
