@@ -195,24 +195,6 @@
 					},
 					"LS_Snowflake_properties_typeProperties_database": {
 						"value": "[parameters('LS_Snowflake_properties_typeProperties_database')]"
-					},
-					"trigger1_properties_pipeline_parameters_FolderPath_Source": {
-						"value": "[parameters('trigger1_properties_pipeline_parameters_FolderPath_Source')]"
-					},
-					"trigger1_properties_pipeline_parameters_Directory_Source": {
-						"value": "[parameters('trigger1_properties_pipeline_parameters_Directory_Source')]"
-					},
-					"trigger1_properties_pipeline_parameters_FolderPath_Destination": {
-						"value": "[parameters('trigger1_properties_pipeline_parameters_FolderPath_Destination')]"
-					},
-					"trigger1_properties_pipeline_parameters_Directory_Destination": {
-						"value": "[parameters('trigger1_properties_pipeline_parameters_Directory_Destination')]"
-					},
-					"trigger1_properties_pipeline_parameters_LastModified_From": {
-						"value": "[parameters('trigger1_properties_pipeline_parameters_LastModified_From')]"
-					},
-					"trigger1_properties_pipeline_parameters_LastModified_To": {
-						"value": "[parameters('trigger1_properties_pipeline_parameters_LastModified_To')]"
 					}
 				}
 			},
@@ -233,6 +215,24 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"trigger1_properties_pipeline_parameters_FolderPath_Source": {
+						"value": "[parameters('trigger1_properties_pipeline_parameters_FolderPath_Source')]"
+					},
+					"trigger1_properties_pipeline_parameters_Directory_Source": {
+						"value": "[parameters('trigger1_properties_pipeline_parameters_Directory_Source')]"
+					},
+					"trigger1_properties_pipeline_parameters_FolderPath_Destination": {
+						"value": "[parameters('trigger1_properties_pipeline_parameters_FolderPath_Destination')]"
+					},
+					"trigger1_properties_pipeline_parameters_Directory_Destination": {
+						"value": "[parameters('trigger1_properties_pipeline_parameters_Directory_Destination')]"
+					},
+					"trigger1_properties_pipeline_parameters_LastModified_From": {
+						"value": "[parameters('trigger1_properties_pipeline_parameters_LastModified_From')]"
+					},
+					"trigger1_properties_pipeline_parameters_LastModified_To": {
+						"value": "[parameters('trigger1_properties_pipeline_parameters_LastModified_To')]"
 					}
 				}
 			},
