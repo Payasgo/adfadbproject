@@ -8,6 +8,9 @@
 		"FileServer1_password": {
 			"value": ""
 		},
+		"LS_DATA_driven_connectionString": {
+			"value": ""
+		},
 		"LS_ecdc_AzureDataLakeStorage_accountKey": {
 			"value": ""
 		},

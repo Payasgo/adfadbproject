@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'FileServer1'"
 		},
+		"LS_DATA_driven_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_DATA_driven'"
+		},
 		"LS_ecdc_AzureDataLakeStorage_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_ecdc_AzureDataLakeStorage'"
@@ -138,9 +142,6 @@
 					"ls_new_AzureDataLakeStorage_accountKey": {
 						"value": "[parameters('ls_new_AzureDataLakeStorage_accountKey')]"
 					},
-					"ls_SqlServer_connectionString": {
-						"value": "[parameters('ls_SqlServer_connectionString')]"
-					},
 					"FileServer1_properties_typeProperties_host": {
 						"value": "[parameters('FileServer1_properties_typeProperties_host')]"
 					},
@@ -161,15 +162,6 @@
 					},
 					"ls_new_AzureDataLakeStorage_properties_typeProperties_url": {
 						"value": "[parameters('ls_new_AzureDataLakeStorage_properties_typeProperties_url')]"
-					},
-					"LS_AzureBlobStorage_sasUri": {
-						"value": "[parameters('LS_AzureBlobStorage_sasUri')]"
-					},
-					"LS_AzureBlobStorage_properties_typeProperties_sasToken_secretName": {
-						"value": "[parameters('LS_AzureBlobStorage_properties_typeProperties_sasToken_secretName')]"
-					},
-					"LS_Snowflake_properties_typeProperties_database": {
-						"value": "[parameters('LS_Snowflake_properties_typeProperties_database')]"
 					}
 				}
 			},
@@ -188,6 +180,21 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"LS_DATA_driven_connectionString": {
+						"value": "[parameters('LS_DATA_driven_connectionString')]"
+					},
+					"ls_SqlServer_connectionString": {
+						"value": "[parameters('ls_SqlServer_connectionString')]"
+					},
+					"LS_AzureBlobStorage_sasUri": {
+						"value": "[parameters('LS_AzureBlobStorage_sasUri')]"
+					},
+					"LS_AzureBlobStorage_properties_typeProperties_sasToken_secretName": {
+						"value": "[parameters('LS_AzureBlobStorage_properties_typeProperties_sasToken_secretName')]"
+					},
+					"LS_Snowflake_properties_typeProperties_database": {
+						"value": "[parameters('LS_Snowflake_properties_typeProperties_database')]"
 					},
 					"trigger1_properties_pipeline_parameters_FolderPath_Source": {
 						"value": "[parameters('trigger1_properties_pipeline_parameters_FolderPath_Source')]"
@@ -211,6 +218,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'Kranthiazuredatafactory_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "Kranthiazuredatafactory_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'Kranthiazuredatafactory_ArmTemplate_1')]"
 			]
 		}
 	]
