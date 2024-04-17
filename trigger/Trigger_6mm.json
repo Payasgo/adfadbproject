@@ -2,7 +2,7 @@
 	"name": "Trigger_6mm",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipeline": {
 			"pipelineReference": {
 				"referenceName": "MetadataDrivenCopyTask_6mm_TopLevel",
@@ -13,7 +13,7 @@
 		"typeProperties": {
 			"frequency": "Hour",
 			"interval": 24,
-			"startTime": "2024-04-16T06:36:00Z",
+			"startTime": "2024-04-16T06:37:00Z",
 			"delay": "00:00:00",
 			"maxConcurrency": 50,
 			"retryPolicy": {
