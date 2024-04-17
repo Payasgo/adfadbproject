@@ -1,0 +1,19 @@
+{
+	"name": "Copy_table6_s1o_ControlDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_DATA_driven",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Copy_table6_s1o_20240417"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tablname"
+		}
+	}
+}
