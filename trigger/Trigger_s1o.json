@@ -2,7 +2,7 @@
 	"name": "Trigger_s1o",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipeline": {
 			"pipelineReference": {
 				"referenceName": "Copy_table6_s1o_TopLevel",
