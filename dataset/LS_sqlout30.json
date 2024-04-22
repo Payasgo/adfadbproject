@@ -1,0 +1,13 @@
+{
+	"name": "LS_sqlout30",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQLDBOUTPUT",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,39 @@
+{
+	"name": "DS_sqlouptput",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQLDBOUTPUT",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Tablename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "iid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "iname",
+				"type": "varchar"
+			},
+			{
+				"name": "ibranch",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().Tablename",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

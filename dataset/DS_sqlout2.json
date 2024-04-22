@@ -1,0 +1,17 @@
+{
+	"name": "DS_sqlout2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQLDBOUTPUT",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "college"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
