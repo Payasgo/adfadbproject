@@ -1,0 +1,77 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "akadf4243"
+		},
+		"LS_SQLDBOUTPUT_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_SQLDBOUTPUT'"
+		},
+		"LS_blobinput_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_blobinput'"
+		},
+		"LS_sqlout1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_sqlout1'"
+		},
+		"LS_sqlout2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_sqlout2'"
+		},
+		"LS_sqlout3_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_sqlout3'"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "akadf4243_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_SQLDBOUTPUT_connectionString": {
+						"value": "[parameters('LS_SQLDBOUTPUT_connectionString')]"
+					},
+					"LS_blobinput_connectionString": {
+						"value": "[parameters('LS_blobinput_connectionString')]"
+					},
+					"LS_sqlout1_connectionString": {
+						"value": "[parameters('LS_sqlout1_connectionString')]"
+					},
+					"LS_sqlout2_connectionString": {
+						"value": "[parameters('LS_sqlout2_connectionString')]"
+					},
+					"LS_sqlout3_connectionString": {
+						"value": "[parameters('LS_sqlout3_connectionString')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
