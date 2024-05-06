@@ -1,0 +1,9 @@
+{
+	"name": "pipeadfset",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c0e38518-3634-48d5-a7b9-a6e00de349a7",
+		"tenantId": "abc7b3b4-0474-4c36-8f68-7f18035fed58"
+	}
+}
