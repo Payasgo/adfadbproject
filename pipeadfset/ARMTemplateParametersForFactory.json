@@ -1,0 +1,99 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "pipeadfset"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"DS_filestore_password": {
+			"value": ""
+		},
+		"FileServer1_password": {
+			"value": ""
+		},
+		"LS_DATA_driven_connectionString": {
+			"value": ""
+		},
+		"LS_ecdc_AzureDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"LS_sqldb_connectionString": {
+			"value": ""
+		},
+		"Ls_AzureSqlDatabase_connectionString": {
+			"value": ""
+		},
+		"ls_AzureDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"ls_SqlServer_connectionString": {
+			"value": "Integrated Security=False;Data Source=@{linkedService().ServerName};Initial Catalog=@{linkedService().DatabaseName};User ID=@{linkedService().UserName};Password=@{linkedService().password}"
+		},
+		"ls_new_AzureDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://tempdataadls.dfs.core.windows.net/"
+		},
+		"DS_filestore_properties_typeProperties_host": {
+			"value": "\\\\bloboriginall76.file.core.windows.net\\fileshare4546"
+		},
+		"DS_filestore_properties_typeProperties_userId": {
+			"value": "bloboriginall76"
+		},
+		"FileServer1_properties_typeProperties_host": {
+			"value": "\\\\MADMAX\\Users\\MadMax\\Downloads\\ftp"
+		},
+		"FileServer1_properties_typeProperties_userId": {
+			"value": "MADMAX\\MadMax"
+		},
+		"LS_AzureBlobStorage_sasUri": {
+			"value": ""
+		},
+		"LS_AzureBlobStorage_properties_typeProperties_sasToken_secretName": {
+			"value": "blobsas"
+		},
+		"LS_HttpServer_properties_typeProperties_url": {
+			"value": "https://opendata.ecdc.europa.eu"
+		},
+		"LS_Snowflake_properties_typeProperties_database": {
+			"value": "AJAY"
+		},
+		"LS_ecdc_AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://adlscopydata.dfs.core.windows.net/"
+		},
+		"Ls_AzureKeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://savemykeysencp.vault.azure.net/"
+		},
+		"RestService1_properties_typeProperties_url": {
+			"value": "https://dummy.restapiexample.com/api/v1/employees"
+		},
+		"ls_AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "@{linkedService().URL}"
+		},
+		"ls_new_AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://kranthiadls.dfs.core.windows.net/"
+		},
+		"trigger1_properties_pipeline_parameters_FolderPath_Source": {
+			"value": " sourcefolder"
+		},
+		"trigger1_properties_pipeline_parameters_Directory_Source": {
+			"value": "subfolder"
+		},
+		"trigger1_properties_pipeline_parameters_FolderPath_Destination": {
+			"value": "destinationfolder"
+		},
+		"trigger1_properties_pipeline_parameters_Directory_Destination": {
+			"value": "subfolder"
+		},
+		"trigger1_properties_pipeline_parameters_LastModified_From": {
+			"value": "@trigger().outputs.windowStartTime"
+		},
+		"trigger1_properties_pipeline_parameters_LastModified_To": {
+			"value": "@trigger().outputs.windowEndTime"
+		}
+	}
+}
