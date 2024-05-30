@@ -6,23 +6,21 @@
 			"ServerName": {
 				"type": "string"
 			},
-			"DatabaseName": {
+			"DatabseName": {
 				"type": "string"
 			},
-			"UserName": {
-				"type": "string"
-			},
-			"password": {
+			"username": {
 				"type": "string"
 			}
 		},
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"connectionString": "Integrated Security=False;Data Source=@{linkedService().ServerName};Initial Catalog=@{linkedService().DatabaseName};User ID=@{linkedService().UserName};Password=@{linkedService().password}"
+			"connectionString": "integrated security=False;data source=@{linkedService().ServerName};initial catalog=@{linkedService().DatabseName};user id=@{linkedService().username}",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJlZDc4ZTE1OC0zNGU3LTQ5ODctODlkZS0yNjI2NjI3ZmYwYTEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
-			"referenceName": "SHIR",
+			"referenceName": "SHIRintegrationRuntime",
 			"type": "IntegrationRuntimeReference"
 		}
 	}
